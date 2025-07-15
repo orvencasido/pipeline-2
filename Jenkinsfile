@@ -3,7 +3,8 @@ pipeline{
 
 	environment{
 		NAME="Orbs"
-		LAST_NAME="Casido"
+		LAST_NAME="Casido"i
+		secret=credentials('SECRET_NAME')
 	}
 
 	stages{
@@ -18,10 +19,18 @@ pipeline{
 				'''
 			}
 		}
-		stage ('Name'){
+		stage('Name'){
 			steps{
 				sh '''
 					echo "Hello! $NAME $LAST_NAME"
+				'''
+			}
+		}
+		stage('Secret'){
+			steps{
+				sh '''
+
+					echo "$secret"
 				'''
 			}
 		}
