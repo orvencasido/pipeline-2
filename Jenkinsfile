@@ -16,7 +16,7 @@ pipeline{
 		stage ('Create'){
 			steps{
 				sh '''
-					mkdir -p test
+					mkdir -p /var/jenkins_home/test
 				'''
 			}
 		}
