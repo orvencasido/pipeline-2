@@ -1,6 +1,11 @@
 pipeline{
 	agent any 
 
+	environment{
+		NAME="Orbs"
+		LAST_NAME="Casido"
+	}
+
 	stages{
 		stage('Build'){
 			steps{
@@ -13,10 +18,10 @@ pipeline{
 				'''
 			}
 		}
-		stage ('Create'){
+		stage ('Name'){
 			steps{
 				sh '''
-					mkdir -p /var/jenkins_home/test
+					echo "Hello! $NAME $LAST_NAME"
 				'''
 			}
 		}
