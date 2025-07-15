@@ -13,5 +13,12 @@ pipeline{
 				'''
 			}
 		}
+		stage ('Create'){
+			steps{
+				sh '''
+					mkdir -p test
+				'''
+			}
+		}
 	}
 }
