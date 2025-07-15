@@ -9,6 +9,7 @@ pipeline{
 					ls -lh
 					cat README.md
 					echo "lets go!"
+					echo "letsgo 2"
 				'''
 			}
 		}
