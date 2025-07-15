@@ -3,7 +3,7 @@ pipeline{
 
 	environment{
 		NAME="Orbs"
-		LAST_NAME="Casido"i
+		LAST_NAME="Casido"
 		secret=credentials('SECRET_NAME')
 	}
 
